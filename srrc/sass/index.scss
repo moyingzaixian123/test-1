@@ -1,0 +1,69 @@
+@import '../sass/_minix.scss';
+@import '../sass/common.scss';
+.wrapper {
+    margin: 0 auto;
+    width: pxTorem(375px);
+    .header {
+        width: 100%;
+        height: pxTorem(40px);
+        display: flex;
+        line-height: pxTorem(40px);
+        background: #F2F2F2;
+        .left {
+            width: 10%
+        }
+        .center {
+            flex: 1;
+            input {
+                height: pxTorem(20px);
+                margin-top: pxTorem(10px);
+                border: 1px solid #ccc;
+                background: #fff;
+            }
+        }
+        .left {
+            width: 10%
+        }
+    }
+    .main {
+        .list {
+            height: pxTorem(30px);
+            // display: flex;
+            line-height: pxTorem(30px);
+            background: #F2F2F2;
+            ul {
+                display: flex;
+                li {
+                    width: 10%;
+                    text-align: center;
+                }
+            }
+        }
+        .iw {
+            display: flex;
+            dl {
+                width: 33%;
+                text-align: center;
+            }
+        }
+        .bottom {
+            width: 100%;
+            img {
+                width: 100%;
+                // height: pxTorem(110px);
+            }
+        }
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        ul {
+            display: flex;
+            li {
+                width: 25%;
+                text-align: center;
+            }
+        }
+    }
+}
