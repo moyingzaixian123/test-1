@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 400px;
+            display: flex;
+            height: 50px;
+            line-height: 50px;
+            margin-left: 100px;
+        }
+        
+        ul li {
+            width: 33%;
+            text-align: center;
+            list-style-type: none;
+        }
+        
+        .active {
+            border-bottom: 1px solid #0ff;
+            color: 1px solid #0ff;
+        }
+        
+        ol li {
+            width: 100%;
+            list-style-type: none;
+        }
+        
+        ol li img {
+            width: 100%;
+        }
+        
+        #tabCon {
+            float: left;
+            margin-left: 100px;
+        }
+        
+        #tabCon div {
+            width: 100%;
+            background: #fff;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul>
+            <li class="active" id='0'>未使用</li>
+            <li id='1'>已使用</li>
+            <li id='2'>已过期</li>
+        </ul>
+        <div id='tabCon'>
+            <div>
+                <ol>
+                    <li>
+                        <img src="_r2_c2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="_r2_c2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="_r2_c2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="_r2_c2.png" alt="">
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <ol>
+                    <li>
+                        <img src="2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="2.png" alt="">
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <ol>
+                    <li>
+                        <img src="4.png" alt="">
+                    </li>
+                    <li>
+                        <img src="4.png" alt="">
+                    </li>
+                    <li>
+                        <img src="4.png" alt="">
+                    </li>
+                    <li>
+                        <img src="4.png" alt="">
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var index = 0;
+        var menus = [...document.querySelectorAll('ul>li')];
+        var tabCons = [...document.querySelectorAll('#tabCon>div')];
+
+        // console.log(menus)
+        menus.forEach(item => {
+            item.onclick = tab;
+        })
+
+        function tab() {
+            menus[index].classList.remove('active');
+            this.classList.add('active');
+            tabCons[index].style.display = 'none';
+
+            index = this.id;
+            tabCons[index].style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
